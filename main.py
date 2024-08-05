@@ -4,9 +4,6 @@ import maze  # Import the custom maze package
 from Settings import *
 from SnakeGame import *
 
-# Snake Game
-
-# Main Loop
 def main():
     pygame.init()
 
