@@ -28,16 +28,21 @@ Ensure you have the following installed:
 
 ### Step 1: Compile the C++ Extensions
 
-Run the `run_maze.ps1` PowerShell script to compile the C++ code and build the Python bindings.
+Build the C++ component and run the `run_maze.ps1` PowerShell script to compile the C++ code and build the Python bindings.
 
 ```powershell
+cmake -S . -B build
+cd build
+cmake --build .
+cd .. 
 .\run_maze.ps1
 ```
 
-This script will:
-1. Navigate to the script directory.
-2. Set the `PYTHONPATH` to include the build directory.
-3. Run the `main.py` script.
+This commands will:
+1. Build the maze module
+2. Navigate to the script directory.
+3. Set the `PYTHONPATH` to include the build directory.
+4. Run the `main.py` script.
 
 ### Step 2: Run the Snake Game
 
